@@ -8,7 +8,10 @@ Installation
 
 You can install it directly from github::
 
-    $ pip install -e git+git://github.com/jaimegildesagredo/expects_docs_mamba_formatter.git#egg=expects_docs_mamba_formatter
+    $ git clone git://github.com/jaimegildesagredo/expects_docs_mamba_formatter.git
+    $ cd expects_docs_mamba_formatter
+    $ python setup.py install
+    $ pip install -r requirements.txt
 
 Usage
 -----
