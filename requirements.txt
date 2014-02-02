@@ -1,0 +1,1 @@
+-e git+git://github.com/jaimegildesagredo/mamba.git@pluggable-formatters#egg=mamba
