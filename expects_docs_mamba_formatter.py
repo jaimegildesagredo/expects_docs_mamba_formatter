@@ -60,11 +60,11 @@ class RSTFormatter(Formatter):
             self.write('.. code-block:: python\n')
             self._in_code_block = True
 
-        self.write('\t{}\n'.format(value))
+        self.write('\t{}'.format(value))
 
     def failure(self, value):
         self._in_code_block = False
-        self.write('.. warning:: {}\n'.format(value))
+        self.write('.. admonition:: Failure\n\n\t{}\n'.format(value))
 
     def write(self, content):
         print(content)
