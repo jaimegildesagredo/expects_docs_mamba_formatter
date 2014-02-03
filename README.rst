@@ -16,7 +16,7 @@ You can install it directly from github::
 Usage
 -----
 
-Once installed you can run the `Expect specs <https://github.com/jaimegildesagredo/expects#specs>`_ with mamba and the installed formatter to generate the examples in `RST <http://sphinx-doc.org/rest.html>`_ format::
+Once installed you can run the `Expects specs <https://github.com/jaimegildesagredo/expects#specs>`_ with mamba and the installed formatter to generate the examples in `RST <http://sphinx-doc.org/rest.html>`_ format::
 
     $ cd expects
     $ mamba spec/expects --format=expects_docs > docs/expectations.rst
