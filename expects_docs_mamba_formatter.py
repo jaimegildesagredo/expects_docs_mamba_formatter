@@ -154,7 +154,7 @@ class RSTFormatter(Formatter):
 
     def failure(self, value):
         self._in_code_block = False
-        self.write('.. admonition:: Failure\n\n    {}\n'.format(value))
+        self.write('.. admonition:: Failure\n    :class: error\n\n    {}\n'.format(value))
 
     def write(self, content):
         print(content)
