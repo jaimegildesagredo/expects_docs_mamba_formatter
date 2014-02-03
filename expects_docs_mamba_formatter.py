@@ -36,7 +36,7 @@ class RSTFormatter(Formatter):
             self.current['successes'].append(expectation)
 
     def __failure(self, raw):
-        match = re.search(r"""failure\((?P<actual>.*)\,\s+('|")(?P<message>.*)('|").*\)""", raw)
+        match = re.search(r"""failure\((?P<actual>[\w\.]+),\s+('|")(?P<message>.*)('|").*\)""", raw)
         actual, message = match.group('actual'), match.group('message')
         return 'Expected {} {}'.format(actual, message)
 
