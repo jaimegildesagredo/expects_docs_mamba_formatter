@@ -23,8 +23,8 @@ KEY = {
 PROPERTY = {
     'code': [
         'class Foo(object):',
-        '\tbar = 0',
-        '\tbaz = 1',
+        '    bar = 0',
+        '    baz = 1',
         '',
         'obj = Foo()',
         ''
@@ -150,11 +150,11 @@ class RSTFormatter(Formatter):
             self.write('.. code-block:: python\n')
             self._in_code_block = True
 
-        self.write('\t{}'.format(value))
+        self.write('    {}'.format(value))
 
     def failure(self, value):
         self._in_code_block = False
-        self.write('.. admonition:: Failure\n\n\t{}\n'.format(value))
+        self.write('.. admonition:: Failure\n\n    {}\n'.format(value))
 
     def write(self, content):
         print(content)
