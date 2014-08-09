@@ -1,20 +1,33 @@
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+from setuptools import setup, find_packages
+from mamba import __version__
 
-setup(
-    name='expects_docs_mamba_formatter',
-    version='0.1.0',
-    description='Mamba formatter to build the Expects docs',
-    author='Jaime Gil de Sagredo Luna',
-    author_email='jaimegildesagredo@gmail.com',
-    license='Apache 2.0',
-    py_modules=['expects_docs_mamba_formatter'],
-    entry_points={
-        'mamba.formatters': [
-            'expects_docs = expects_docs_mamba_formatter:RSTFormatter'
-        ]
-    },
-    classifiers=[
-    ]
-)
+setup(name='mamba',
+      version=__version__,
+      description="The definitive testing tool for Python. Born under the banner of Behavior Driven Development.",
+      long_description=open('README.md').read(),
+      classifiers=[
+          'Development Status :: 4 - Beta',
+          'Environment :: Console',
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: MIT License',
+          'Operating System :: OS Independent',
+          'Topic :: Software Development :: Quality Assurance',
+          'Topic :: Software Development :: Testing'
+
+      ],
+      keywords='',
+      author=u'Néstor Salceda',
+      author_email='nestor.salceda@gmail.com',
+      url='http://nestorsalceda.github.io/mamba',
+      license='MIT/X11',
+      packages=find_packages(exclude=['ez_setup', 'examples', 'spec', 'spec.*']),
+      include_package_data=True,
+      zip_safe=False,
+      install_requires=[line for line in open('requirements.txt')],
+      entry_points={
+          'console_scripts': [
+              'mamba = mamba.cli:main'
+          ]
+      })

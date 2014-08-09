@@ -1,8 +1,7 @@
+*.pyc
 .*.swp
-*.py[co]
-*.egg-info/
-build/
-dist/
-docs/_build/
+.*.swo
+*.egg-info
+build
+dist
 .coverage
-.tox/

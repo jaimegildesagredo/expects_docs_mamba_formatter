@@ -3,7 +3,7 @@
 import re
 import inspect
 
-from mamba.formatters import Formatter
+from .formatters import Formatter
 
 KEY = {
     'code': [
@@ -40,8 +40,7 @@ PROPERTY = {
 }
 
 
-class RSTFormatter(Formatter):
-
+class ExpectsDocsFormatter(Formatter):
     statics = {
         'a': PROPERTY,
         'an': PROPERTY,
